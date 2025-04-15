@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu</title>
+</head>
+<body>
+  <h2>Our Menu</h2>
+  <ul>
+    {% for item in items %}
+      <li>
+        {{ item['name'] }} - ₹{{ item['price'] }} ({{ item['category'] }})
+        <form method="POST" action="/order">
+          <input type="hidden" name="item" value="{{ item['name'] }}">
+          <input type="text" name="name" placeholder="Your Name">
+          <button type="submit">Order Now</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
+{% for item in items %}
+  <div style="margin: 20px; border: 1px solid #ccc; padding: 10px;">
+    <img src="{{ item['image'] }}" width="200" height="150"><br>
+    <strong>{{ item['name'] }}</strong> - ₹{{ item['price'] }} <br>
+    ({{ item['category'] }})
+    <form method="POST" action="/order">
+      <input type="hidden" name="item" value="{{ item['name'] }}">
+      <input type="text" name="name" placeholder="Your Name">
+      <button type="submit">Order Now</button>
+    </form>
+  </div>
+{% endfor %}

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background-color: #fefae0;
+}
+
+h1, h2, h3 {
+  color: #d62828;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f77f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
